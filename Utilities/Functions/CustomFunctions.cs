@@ -5,25 +5,34 @@ namespace Utilities;
 
 public class CustomFunctions
 {
-    public static string GetInputFromUser(string message, int limit = 3)
+    public static void DrawTriangle(int depth)
     {
-        if (limit == 0)
+
+        if (depth < 2) return;
+
+        string triangle = string.Empty;
+        int star = -1;
+
+        for (int i = 0; i < depth; i++)
         {
-            throw new Exception("Input is invalid, maximum retry number exceeded!");
+
+            for (int j = depth - i; j > 1; j--)
+            {
+                triangle += " ";
+            }
+
+            star += 2;
+
+            for (int k = 0; k < star; k++)
+            {
+                triangle += "*";
+            }
+
+            triangle += "\n";
         }
 
-        Console.Write($"{message}: ");
-
-        string? input = Console.ReadLine();
-
-        if (input is null) input = GetInputFromUser(message, limit - 1);
-
-        return input;
-    }
-
-    public static double Average(int[] array)
-    {
-        return (double)array.Sum() / array.Length;
+        Console.Write(triangle);
+        // return triangle;
     }
 
     public static int[] CreateFibonacciArray(int depth)
@@ -53,5 +62,26 @@ public class CustomFunctions
         {
             return [];
         }
+    }
+
+    public static double Average(int[] array)
+    {
+        return (double)array.Sum() / array.Length;
+    }
+
+    public static string GetInputFromUser(string message, int limit = 3)
+    {
+        if (limit == 0)
+        {
+            throw new Exception("Input is invalid, maximum retry number exceeded!");
+        }
+
+        Console.Write($"{message}: ");
+
+        string? input = Console.ReadLine();
+
+        if (input is null) input = GetInputFromUser(message, limit - 1);
+
+        return input;
     }
 }
