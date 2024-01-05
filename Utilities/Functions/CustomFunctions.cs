@@ -5,6 +5,34 @@ namespace Utilities;
 
 public class CustomFunctions
 {
+
+    public static void DrawCircle(int radius)
+    {
+        if (radius < 1) return;
+
+        string[] circle = new string[radius];
+        string axis = string.Empty;
+
+        for (int i = -radius; i < 0; i++)
+        {
+            for (int j = -radius; j <= radius; j++)
+            {
+                if (i * i + j * j <= radius * radius)
+                {
+                    circle[radius + i] += "*";
+                }
+                else
+                {
+                    circle[radius + i] += " ";
+                }
+            }
+
+            axis += "**";
+        }
+
+        Console.WriteLine(string.Join("\n", circle) + "\n" + axis + "*\n" + string.Join("\n", circle.Reverse().ToArray()));
+    }
+
     public static void DrawTriangle(int depth)
     {
 
