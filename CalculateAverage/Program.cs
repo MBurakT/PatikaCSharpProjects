@@ -13,7 +13,7 @@ class Program
             {
                 Console.WriteLine($"Value is not numeric! input: {input}");
             }
-            else if (input <= 0)
+            else if (input < 1)
             {
                 Console.WriteLine($"Value is zero or negative! input: {input}");
                 break;
