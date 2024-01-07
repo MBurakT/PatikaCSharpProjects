@@ -28,33 +28,28 @@ class Program
 
                 for (int i = 0; i < size; i++)
                 {
-                    if (!int.TryParse(CustomFunctions.GetInputFromUser("Please enter number"), out numbers[i]))
+                    if (int.TryParse(CustomFunctions.GetInputFromUser("Please enter number"), out numbers[i]))
+                    {
+                        if (i == 0)
+                            temp = numbers[i];
+                        else if
+                            (temp != numbers[i]) isSame = false;
+                    }
+                    else
                     {
                         Console.WriteLine("Value is not numeric!");
                         limit++;
                         if (limit == 3) break;
                         i--;
                     }
-                    else if (i == 0)
-                    {
-                        temp = numbers[i];
-                    }
-                    else if (temp != numbers[i])
-                    {
-                        isSame = false;
-                    }
                 }
 
                 if (limit == 3) break;
 
                 if (isSame)
-                {
                     Console.WriteLine(Math.Pow(temp, size));
-                }
                 else
-                {
                     Console.WriteLine(numbers.Sum());
-                }
             }
         }
     }
