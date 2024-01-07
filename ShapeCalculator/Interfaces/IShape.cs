@@ -1,0 +1,3 @@
+namespace ShapeCalculator;
+
+interface IShape { }
