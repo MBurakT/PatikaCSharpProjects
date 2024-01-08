@@ -13,7 +13,7 @@ class Program
 
             if (input.Equals("0"))
                 break;
-            else if (input.Length == 0)
+            else if (input.Length == 1)
                 Console.WriteLine(input);
             else
             {
