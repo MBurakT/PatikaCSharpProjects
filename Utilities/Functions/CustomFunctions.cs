@@ -5,6 +5,25 @@ namespace Utilities;
 
 public class CustomFunctions
 {
+    public static bool IsVowel(char letter)
+    {
+        // char[] vowels = { 'a', 'e', 'ı', 'i', 'o', 'ö', 'u', 'ü' };
+        char[] vowels = ['a', 'e', 'ı', 'i', 'o', 'ö', 'u', 'ü'];
+
+        if (vowels.Contains(letter)) return true;
+
+        return false;
+    }
+
+    public static bool IsConsonant(char letter)
+    {
+        // char[] vowels = { 'a', 'e', 'ı', 'i', 'o', 'ö', 'u', 'ü' };
+        char[] vowels = ['a', 'e', 'ı', 'i', 'o', 'ö', 'u', 'ü'];
+
+        if (vowels.Contains(letter)) return false;
+
+        return true;
+    }
 
     public static void DrawCircle(int radius)
     {
