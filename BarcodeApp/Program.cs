@@ -20,7 +20,7 @@ class Program
             barcode.AddAnnotationTextBelowBarcode("MBurakT");
             string path = Environment.CurrentDirectory + "\\BarcodeApp\\Images\\barcode.png";
             if (File.Exists(path)) File.Delete(path);
-            barcode.SaveAsJpeg(path);
+            barcode.SaveAsPng(path);
 
             BarcodeResults barcd = BarcodeReader.Read(path);
             Console.WriteLine(barcd[0].Value);
