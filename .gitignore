@@ -1,8 +1,8 @@
-#VSCode
-*.vscode
+# VSCode
+# *.vscode
 *.vs
 
-#CSharp
+# CSharp
 *.nupkg
 *.sln
 [Dd]ebug/
