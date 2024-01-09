@@ -1,2 +1,0 @@
-[09.01.2024 18:14:08] Username or Password is wrong! Username: Burak Password: password.[09.01.2024 18:14:23] Log in successfull. Username: brktrhn.[09.01.2024 18:14:27] Withdraw: 1500.[09.01.2024 18:14:36] Deposit: 750.[09.01.2024 18:14:40] Pay: 500.[09.01.2024 18:14:43] Log out successfull. Username: brktrhn.
-[09.01.2024 18:15:47] Log in successfull. Username: emrtmr.[09.01.2024 18:15:55] Withdraw: 25000.[09.01.2024 18:16:05] Pay: 10000.[09.01.2024 18:16:10] Deposit: 50000.[09.01.2024 18:16:16] Log out successfull. Username: emrtmr.
