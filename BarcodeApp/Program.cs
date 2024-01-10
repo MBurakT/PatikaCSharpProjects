@@ -16,9 +16,9 @@ class Program
                 break;
             }
 
-            GeneratedBarcode barcode = BarcodeWriter.CreateBarcode("https://github.com/SecAccR", BarcodeEncoding.Code128, 400, 180);
+            GeneratedBarcode barcode = BarcodeWriter.CreateBarcode("https://github.com/SecAccR", BarcodeEncoding.QRCode, 400, 180);
             barcode.AddAnnotationTextBelowBarcode("MBurakT");
-            string path = Environment.CurrentDirectory + "\\BarcodeApp\\Images\\barcode.png";
+            string path = Environment.CurrentDirectory + "\\BarcodeApp\\Images\\QrCode.png";
             if (File.Exists(path)) File.Delete(path);
             barcode.SaveAsPng(path);
 
